@@ -1,3 +1,46 @@
-# lunaTarot
-This is a website for tarot beginner and lover.  
-Hope you like it and wish you good luck.
+# LunaTarot
+
+面向塔罗新手与爱好者的中文自我探索网站。午夜蓝与柔金色视觉，适配桌面和手机。
+
+## 功能
+
+- 单牌与三牌（现状／阻碍／建议）抽取，可选正逆位。
+- 使用 Web Crypto 洗牌，同次抽牌不重复；支持手动选牌、逐张揭晓与草稿恢复。
+- 每日一牌，同一浏览器当天再次进入时保留原牌。
+- 78 张符号化牌面与中文基础牌义，包含关键词、正逆位、象征和反思问题；支持搜索与牌组筛选。
+- 本地日记、笔记、收藏、搜索、删除与 JSON 备份导出；单次探索可导出为文本。
+- 减少动态效果偏好、键盘焦点与原生对话框支持。
+
+当前解读为基础牌义组合，**未接入 AI 服务**。牌面用于反思，不预测确定的未来。图鉴牌面为本站符号化设计，不是传统韦特插图；首页插画由 AI 生成。
+
+## 本地运行
+
+需要 Node.js 22+ 和 Python 3，无需安装运行依赖。
+
+```sh
+npm run dev
+```
+
+打开 http://127.0.0.1:4173 。请通过 HTTP 服务访问，以加载 JavaScript 模块。
+
+```sh
+npm test
+npm run build
+```
+
+构建结果在 `dist/`，可以部署到静态托管服务。`luna.html` 兼容旧入口，转到 `index.html`。
+
+## 数据与隐私
+
+问题、草稿和日记只保存于当前浏览器的 localStorage，没有账号、云端同步或服务器存储。清除浏览器数据会删除记录，建议定期导出备份。最多保留 200 篇日记；JSON 导出目前用于备份，尚无导入界面。Google Fonts 用于加载中文衬线字体，加载失败时使用系统字体。
+
+## 文件
+
+- `index.html`、`luna.css`：页面入口与响应式样式。
+- `app.js`：探索流程、图鉴、日记和交互。
+- `cards.js`：78 张牌、主题与牌阵。
+- `reading.js`：随机抽牌、基础解读与数据校验。
+- `storage.js`：浏览器存储及容错。
+- `docs/competitors.md`：竞品调研与功能取舍。
+
+`mian.py`、`demo` 是原仓库的 Flutter 示例（并非 Python 服务），`focuscat.cs` 与 `coolkitty.md.m` 是原有专注宠物实验；这些文件保留作历史参考，不参与网站构建。

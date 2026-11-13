@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10131f">
+  <meta name="description" content="LunaTarot：以塔罗为一面温柔的镜子。单牌与三牌探索、78 张牌义图鉴，记录属于你的思考。">
+  <title>LunaTarot · 听见自己</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="luna.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <a href="#main" class="skip-link">跳至内容</a>
+  <header class="site-header"><div class="header-inner">
+    <a class="brand" href="#home" aria-label="LunaTarot 首页"><span class="brand-moon" aria-hidden="true">☾<i>✧</i></span><span>LunaTarot<span class="brand-caption">一面温柔的镜子</span></span></a>
+    <nav aria-label="主导航"><a href="#home" data-nav="home">开始探索</a><a href="#library" data-nav="library">牌义图鉴</a><a href="#journal" data-nav="journal">我的日记<span id="journal-count"></span></a></nav>
+  </div></header>
+  <main id="main" tabindex="-1"></main>
+  <footer class="site-footer"><a href="#home">☾ LunaTarot</a><p>答案之外，也有新的看见。</p><button type="button" class="text-button" data-action="about">关于塔罗与隐私 ↗</button></footer>
+  <dialog id="detail-dialog" aria-labelledby="dialog-title"><div id="dialog-content"></div><form method="dialog"><button class="dialog-close" aria-label="关闭对话框">×</button></form></dialog>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <noscript><p class="noscript">请启用 JavaScript 以使用抽牌、图鉴和本地日记。</p></noscript>
+</body>
+</html>
